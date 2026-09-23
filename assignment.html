@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Cafe Shop</title>
+    <style>
+        /* Global Styles / ការកំណត់ទូទៅ */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f6f0;
+            color: #333333;
+        }
+
+        /* Header & Navigation / របារ Menu ខាងលើ */
+        header {
+            background-color: #3e2723;
+            color: #ffffff;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d7ccc8;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d7ccc8;
+        }
+
+        /* Hero Banner Section / ផ្នែកផ្ទាំង Banner ខាងលើ */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .btn-primary {
+            background-color: #6d4c41;
+            color: #ffffff;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #4e342e;
+        }
+
+        /* Main Container / ប្រអប់មាតិកាកណ្តាល */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            color: #3e2723;
+            margin-bottom: 30px;
+        }
+
+        /* Coffee Menu Section / ផ្នែកតារាង Menu កាហ្វេ */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .menu-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-card h3 {
+            margin: 15px 0 8px 0;
+            color: #3e2723;
+        }
+
+        .menu-card p {
+            font-size: 14px;
+            color: #666666;
+            padding: 0 15px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #8d6e63;
+            font-size: 18px;
+        }
+
+        /* Footer Section / ផ្នែក Footer ខាងក្រោម */
+        footer {
+            background-color: #3e2723;
+            color: #d7ccc8;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header & Navigation -->
+    <header>
+        <div class="logo">☕ Thim Brem Cafe</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Banner -->
+    <section class="hero" id="home">
+        <h1>Welcome to Thim Brem  Cafe</h1>
+        <p>Freshly brewed coffee made with love every morning.</p>
+        <a href="#menu" class="btn-primary">View Our Menu</a>
+    </section>
+
+    <!-- 3. Main Menu Container -->
+    <div class="container" id="menu">
+        <h2 class="section-title">Our Popular Menu</h2>
+
+        <div class="menu-grid">
+            <!-- Item 1 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=500" alt="Espresso">
+                <h3>Hot Espresso</h3>
+                <p>Rich and bold single-shot espresso made from premium beans.</p>
+                <div class="price">$2.50</div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500" alt="Iced Latte">
+                <h3>Iced Caffe Latte</h3>
+                <p>Smooth espresso combined with cold milk and fresh ice.</p>
+                <div class="price">$3.50</div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Classic espresso topped with a thick layer of steamed milk foam.</p>
+                <div class="price">$3.00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Footer Section -->
+    <footer>
+        <p>© 2026 Aroma Cafe Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
